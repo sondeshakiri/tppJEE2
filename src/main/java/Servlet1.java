@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Locale;
 
 import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
@@ -23,6 +24,9 @@ public class Servlet1 extends GenericServlet
         //get name from request
         String name = request.getParameter ("name");
         PrintWriter out = response.getWriter ();
+        Locale loc = response.getLocale ();
+        out.println ("Locale set for this application is " + loc.toString ());
+        
         //affichage
         out.println("hello from servlet");
         out.println (name);

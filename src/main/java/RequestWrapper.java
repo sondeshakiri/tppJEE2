@@ -1,7 +1,7 @@
 import javax.servlet.*;
-public class Wrapper extends ServletRequestWrapper
+public class RequestWrapper extends ServletRequestWrapper
 {
-    public Wrapper (ServletRequest req)
+    public RequestWrapper (ServletRequest req)
     {
         //calls the ServletRequestWrapper superclass's constructor i.e. ServletRequest.
         super (req);
